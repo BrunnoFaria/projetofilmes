@@ -11,9 +11,9 @@ url.addEventListener("blur", () => {
 })
 sinopse.addEventListener("blur", () => {
     validarInput(sinopse);
-
 })
 
+//verifição dos inputs
 function validarInput(campo) {
     let erros = 0;
     let novoValor = campo.value.trim();
@@ -62,12 +62,10 @@ function limparFormulario() {
 
 function criarCard(nome, url, sinopse) {
     let card = `
-          <img src="${url}" alt="">
+          <img src="${url}" alt="imagem filme">
             <div class="caixa-sinopse"> 
                 <h3>${nome}</h3>                       
-                <p>${sinopse}</p>
-            </div>
-           `;
+                <p>${sinopse}</p></div>`;
 
     
     let div = document.createElement("div");
@@ -75,7 +73,9 @@ function criarCard(nome, url, sinopse) {
     div.innerHTML = card;
 
     document.getElementById("container-cards").appendChild(div);
-    
+    // estrutura para local storage 77,78
+    let json = `{"imagem":"${url}", "nome":"${nome}","sinopse":"${sinopse}"}`
+    localStorage.setItem("json",json)
 }
 
 document.querySelector("form").addEventListener("submit", (event) => {
@@ -87,9 +87,21 @@ function modificarDivs() {
     let container = document.getElementById("container-cards");
     let containerForm = document.getElementById("container-form");
 
-         container.style.flex = "1";
-        containerForm.style.maxWidth = "40%";
+    container.style.flex = "1";
+    containerForm.style.maxWidth = "40%";
     container.style.overflowY = "scroll";
     
 }
+// estrutura localStorage
+window.onload = function() {
+    modificarDivs()
 
+    let obj = localStorage.getItem('json')
+    obj = JSON.parse(obj)
+
+    let cardSection = document.getElementById("container-cards");
+    cardSection.innerHTML += `<div class="card"> <img src="${obj.imagem}">
+    <div class="caixa-sinopse"> 
+                                    <h2>${obj.nome}</h2>
+                                    <p>${obj.sinopse}</p></div> </div>`;
+}
