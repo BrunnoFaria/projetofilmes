@@ -105,3 +105,23 @@ window.onload = function() {
                                     <h2>${obj.nome}</h2>
                                     <p>${obj.sinopse}</p></div> </div>`;
 }
+
+/* Adições do JS para mostrar o conteudo de sobre nós */
+let sobre = document.getElementById("sobre-nos");
+let sobreMenu = document.getElementById("sobre-menu");
+let span = document.getElementsByClassName("fechar")[0];
+
+sobreMenu.onclick = function () {
+    sobre.style.display = "block";
+}
+
+span.onclick = function () {
+    sobre.style.display = "none";
+}
+
+window.onclick = function(evento) {
+    if (evento.target == sobre) {
+        sobre.style.display = "none";
+    }
+}
+/* FIM adições */

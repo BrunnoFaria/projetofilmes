@@ -7,6 +7,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -42,7 +43,7 @@ nav {
 }
 
 #logo {
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', sans-serif;
   font-size: 26px;
   color: var(--branco);
 
@@ -60,14 +61,9 @@ nav {
 .item-menu {
   padding: 20px 10px; /* Primeiro valor: em cima e em baixo | Segundo valor: esquerda e direita */
   margin: 0px 20px;
-
   color: var(--branco);
-
   display: block;
-
-  font-family: 'Poppins';
   font-size: 16px;
-
   transition: color 0.2s;
 }
 
@@ -77,137 +73,176 @@ nav {
 
 /****************************** SEÇÃO ***************/
 #secao {
-    height: calc(100vh - 12vh);
-    
-    display: flex;
+  height: calc(100vh - 12vh);
+  display: flex;
 }
 /*CONTAINER DO FORMULÁRIO*/
 #container-form{
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: max-width 0.5s;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: max-width 0.5s;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 0px 10px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 0px 10px; 
 }
 
 label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 form h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 label {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    
-    
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 label input {
-    height: 35px;
-    border-radius: 5px;
-    padding: 0px 10px;
-
-    border: 2px solid var(--vermelho);
-
+  height: 35px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 2px solid var(--vermelho);
 }
 
 label textarea {
-    height: 200px;
-    resize: none;
-    border-radius: 5px;
-    padding: 10px;
-    border: 2px solid var(--vermelho);
+  height: 200px;
+  resize: none;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid var(--vermelho);
 }
 
 label span {
-    font-size: 12px;
-    color: red;
-    height: 18px;
+  font-size: 12px;
+  color: red;
+  height: 18px;
 }
 
 #botao-cadastrar {
-    width: 100%;
-    height: 35px;
-    background-color: var(--vermelho);
-    cursor: pointer;
-    color: var(--branco);
-    margin-top: 20px;
-    border-radius: 5px;
-    transition: background 0.2s;
+  width: 100%;
+  height: 35px;
+  background-color: var(--vermelho);
+  cursor: pointer;
+  color: var(--branco);
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background 0.2s;
 }
 
 #botao-cadastrar:hover {
-    background-color: rgba(224, 93, 93, 0.8);
+  background-color: rgba(224, 93, 93, 0.8);
 }
-
 
 /*CONTAINER DOS CARDS*/
 #container-cards {
-    width: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    
-
-    transition: width 0.5s;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: width 0.5s;
 }
 
 .card {
-    width: 100%;
-    max-width: 800px;
-    height: 280px;
-    
-    display: flex;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  height: 280px;    
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .card img {
-    height: 240px;
-    width: auto;
+  height: 240px;
+  width: auto;
 }
 
 .caixa-sinopse {
-    height: 240px;
-    word-break: break-all;
-    overflow-y: scroll;
-
-    padding: 15px;
-
+  height: 240px;
+  word-break: break-all;
+  overflow-y: scroll;
+  padding: 15px;
 }
 
 .caixa-sinopse::-webkit-scrollbar {
-    width: 10px;
-  }
+  width: 10px;
+}
   
-  .caixa-sinopse::-webkit-scrollbar-thumb {
-    background-color: var(--vermelho);
-    border-radius: 5px;
-  }
+.caixa-sinopse::-webkit-scrollbar-thumb {
+  background-color: var(--vermelho);
+  border-radius: 5px;
+}
 
 .caixa-sinopse h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
+
+/* Alterações pra exibir informações de sobre nós */
+.sobre {
+  display: none;
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.conteudo-pg {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border: solid 12px #fefefe;
+  border-radius: 12px;
+}
+
+.conteudo-pg > h2, .conteudo-pg > h3 {
+  color: var(--azul);
+  font-weight: bold;
+  padding: 5px 0 5px;
+}
+
+.conteudo-pg > p {
+  padding: 15px 0 5px;
+}
+
+.conteudo-pg > a {
+  padding: 5px;
+}
+
+.fechar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fechar:hover, .fechar:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+} /* FIM alterações. */
+
+/* MEDIA QUERIES PRA RESPONSIVIDADE */
