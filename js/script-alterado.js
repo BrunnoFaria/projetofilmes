@@ -161,8 +161,8 @@ window.onload = function() {
      sobre.style.display = "none";
  }
 
-// window.onclick = function(evento) {
-//     if (evento.target == sobre) {
-//         sobre.style.display = "none";
-//     }
-// }
+ window.onclick = function(evento) {
+     if (evento.target == sobre) {
+         sobre.style.display = "none";
+     }
+ }
