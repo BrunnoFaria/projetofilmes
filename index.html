@@ -17,37 +17,36 @@
                 <a class="item-menu" href="index.html">Home</a>
                 <a class="item-menu" href="#" id="sobre-menu">Sobre nós</a>
             </div>
-
-            </div>
-
-            </a>
         </nav>
     </header>
     <section id="secao">
-        <div id="container-form">
-            <form action="">
-                <h3>Cadastrar Filme</h3>
-                    <label for="nome_filme">
-                        Nome do filme:
-                        <input type="text" id="nome_filme" name="entradaDados">
-                            <span></span>
-                    </label>
-                    <label for="url_filme">
-                        Url:
-                        <input type="url" id="url_filme"name="entradaDados">
-                            <span></span>
+        <div class="praResponsividade">
+            <div id="container-form">
+                <form action="">
+                    <h3>Cadastrar Filme</h3>
+                        <label for="nome_filme">
+                            Nome do filme:
+                            <input type="text" id="nome_filme" name="entradaDados">
+                                <span></span>
                         </label>
-                    <label for="sinopse_filme">
-                        Sinopse:
-                        <textarea id="sinopse_filme" name="entradaDados"></textarea>
-                            <span></span>
-                    </label>
-                    <button id="botao-cadastrar" type="submit">Cadastrar</button>
-            </form>
+                        <label for="url_filme">
+                            Url:
+                            <input type="url" id="url_filme"name="entradaDados">
+                                <span></span>
+                            </label>
+                        <label for="sinopse_filme">
+                            Sinopse:
+                            <textarea id="sinopse_filme" name="entradaDados"></textarea>
+                                <span></span>
+                        </label>
+                        <button id="botao-cadastrar" type="submit">Cadastrar</button>
+                </form>
+            </div>
+           <div id="container-cards">
+                
+            </div>
         </div>
-       <div id="container-cards">
-            
-        </div>
+        
     </section>
     <!-- Mudanças e alteraçoes feitas por Ronilson -->
     <!-- Mostra uma div flutuante com informaçõs sobre o projeto quando clicado em sobre nós no menu -->
@@ -58,8 +57,8 @@
             <p>Seguindo os requisitos do Checkpoint I de Front End II, a equipe construiu uma web aplicação que simula o cadastro de Filmes,
                 onde o usuário pode Inserir o Título, a URL do cartaz do filme, bem como sua sinopse.
             </p>
-            <p>De forma dinâmica, esses dados são exibidos em cards. Foi aplicado responsividade e implementado as features apresentadas em aula
-                no decorrer das duas semanas de projeto.
+            <p>De forma dinâmica, esses dados são exibidos em cards. Foi aplicado responsividade, validação de campos e formulário,
+                armazenamento local usando o LocalStorage, além da manipulação de dados usando objetos JSON.
             </p>
             <p> <a href="https://github.com/brunnofaria/projetofilmes" target="_blank" rel="noopener noreferrer">Clique aqui para visualizar o diretório do projeto no Github</a></p>
             <h3>Integrantes:</h3>
@@ -71,7 +70,7 @@
             <a href="https://github.com/sarawwx" target="_blank" rel="noopener noreferrer">Sara Leite</a>
         </div>
     </div>
-    <script src="./js/script-alterado.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
